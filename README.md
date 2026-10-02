@@ -18,7 +18,7 @@ Este repositorio documenta las tres fases pedidas en el Evento Evaluativo 2:
 
 1. **Exploración de bases de datos**: se exploraron 3 datasets de distinto tipo (tabular, imágenes, texto) y se justificó la selección de la base final.
 2. **Análisis Exploratorio de Datos (EDA)**: sobre el dataset seleccionado (Titanic), se realizó revisión de valores faltantes, detección de atípicos, análisis de distribuciones, análisis univariado y multivariado, formulación y prueba de hipótesis, y un listado de insights.
-3. **Preprocesamiento y reducción de dimensionalidad**: codificación de variables categóricas, escalado/normalización y reducción de dimensionalidad con PCA.
+3. **Preprocesamiento y reducción de dimensionalidad**: limpieza e imputación, transformación logarítmica de `fare`, codificación de variables categóricas, escalado/normalización y reducción de dimensionalidad con PCA (con scree plot) y t-SNE.
 
 ## Dataset seleccionado
 
@@ -62,15 +62,22 @@ Los tres notebooks son independientes entre sí en cuanto a carga de datos (cada
 
 Enlace al video (máx. 8 minutos): _pendiente — agregar enlace aquí antes de la entrega final_.
 
-## Flujo de trabajo en equipo (GitHub)
+## Aporte de cada integrante
 
-Para que los commits reflejen la participación real de cada integrante:
-
-1. Cada integrante trabaja sobre su propia rama (`git checkout -b nombre/fase1-exploracion`, por ejemplo) y abre un Pull Request hacia `main` cuando termina su parte.
-2. Cada quien hace commits de su propio trabajo, con su usuario y correo de GitHub configurados (`git config user.name` / `user.email`), en vez de que una sola persona suba todo el código del equipo.
-3. Mensajes de commit descriptivos, por ejemplo: `fase2: agrega boxplots de outliers en age y fare`, no `update` o `cambios`.
-4. Se recomienda que cada integrante sea responsable principal de al menos una fase/notebook, pero que revise y comente el trabajo de los demás (vía Pull Request) para que la organización y trazabilidad en GitHub (criterio de la rúbrica) quede clara.
+| Integrante | Aporte |
+|---|---|
+| Santiago Betancur | Estructura del repositorio y `01_exploracion_datasets.ipynb`: carga y exploración de Titanic, Digits y SMS Spam. Revisión y fusión de los Pull Requests. |
+| Diego Alzate | Fase 1: tabla comparativa y selección del dataset. Fase 2: valores faltantes, valores atípicos y transformación logarítmica de `fare`. |
+| Carlos Mendez | Fase 2: distribuciones, análisis univariado y multivariado, patrones combinados de clase y sexo, y formulación de hipótesis. |
+| Sebastian Cadavid | Fase 2: pruebas de hipótesis (supuestos, Mann-Whitney y tamaño del efecto) e insights. Fase 3: limpieza y codificación de variables. |
+| Daniel Martinez | Fase 3: escalado, PCA (con scree plot), t-SNE y comparación. Sección de principales hallazgos del README. |
 
 ## Nota sobre el uso de herramientas de IA
 
-Este proyecto usó IA como apoyo para estructurar el código y los notebooks. La rúbrica del evento evalúa explícitamente la **autenticidad y conciencia del trabajo**: antes de grabar el video, cada integrante debe ejecutar el código, revisar los resultados con sus propios datos (pueden variar ligeramente según la versión de las librerías) y estar en capacidad de explicar con sus palabras cada decisión tomada (por qué se imputó así, por qué se escogió ese dataset, qué significa cada gráfica).
+Usamos IA como apoyo para estructurar el código y algunos textos de los notebooks. Todo el código lo ejecutamos y revisamos nosotros, y al revisarlo corregimos cosas que estaban mal o incompletas. Las decisiones del análisis las tomamos y discutimos en el equipo.
+
+- **Santiago:** revisé los Pull Requests del equipo antes de fusionarlos.
+- **Diego:** al revisar `fare` vi que tenía un sesgo muy fuerte y apliqué la transformación logarítmica para reducirlo.
+- **Carlos:** completé el análisis univariado con las variables que faltaban (`embarked`, `sibsp`, `parch`) y agregué los patrones combinados de clase y sexo.
+- **Sebastian:** al revisar las pruebas de hipótesis agregué los supuestos de normalidad y el tamaño del efecto, y dejé H2 como no concluyente.
+- **Daniel:** corregí el escalado del PCA para estandarizar las 9 variables y reescribí su interpretación.
