@@ -48,6 +48,16 @@ jupyter notebook notebooks/
 
 Los tres notebooks son independientes entre sí en cuanto a carga de datos (cada uno vuelve a cargar lo que necesita), pero deben leerse en orden: `01` → `02` → `03`.
 
+## Principales hallazgos (detalle en `02_eda.ipynb` y `03_preprocesamiento.ipynb`)
+
+- Solo sobrevivió el ~38% de los pasajeros: la clase objetivo está desbalanceada.
+- El sexo es el factor más asociado con la supervivencia (chi-cuadrado p ≈ 0, V de Cramér ≈ 0.54, efecto fuerte).
+- Clase y sexo interactúan: las mujeres de 1ª clase sobrevivieron en un ~97%, las de 3ª solo en un ~50%, y los hombres de 2ª en un ~16%.
+- La edad no es un buen predictor por sí sola: no es normal (Shapiro-Wilk), y con Mann-Whitney la diferencia entre grupos no es significativa (p ≈ 0.16, d de Cohen ≈ −0.16).
+- `fare` tiene un sesgo fuerte (≈ 4.79) que la transformación log(1+x) reduce a ≈ 0.39.
+- `deck` tiene ~77% de faltantes y se eliminó; `age` (~20%) se imputó con la mediana.
+- Con las 9 variables estandarizadas, PC1 + PC2 explican ~43.6% de la varianza y se necesitan unas 5 componentes para llegar al 80%. Ni PCA ni t-SNE separan con claridad a sobrevivientes de no sobrevivientes.
+
 ## Video explicativo
 
 Enlace al video (máx. 8 minutos): _pendiente — agregar enlace aquí antes de la entrega final_.
