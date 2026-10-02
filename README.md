@@ -34,7 +34,7 @@ Este repositorio documenta las tres fases pedidas en el Evento Evaluativo 2:
 ├── notebooks/
 │   ├── 01_exploracion_datasets.ipynb   # Fase 1: exploración y selección de la base de datos
 │   ├── 02_eda.ipynb                    # Fase 2: EDA completo + pruebas de hipótesis
-│   └── 03_preprocesamiento.ipynb       # Fase 3: codificación, escalado y PCA
+│   └── 03_preprocesamiento.ipynb       # Fase 3: codificación, escalado, PCA y t-SNE
 ```
 
 ## Cómo ejecutar
@@ -60,7 +60,7 @@ Los tres notebooks son independientes entre sí en cuanto a carga de datos (cada
 
 ## Video explicativo
 
-Enlace al video (máx. 8 minutos): _pendiente — agregar enlace aquí antes de la entrega final_.
+Enlace al video (máx. 8 minutos): https://youtu.be/ZdKd2agTuLM
 
 ## Aporte de cada integrante
 
