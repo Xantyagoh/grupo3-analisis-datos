@@ -6,11 +6,11 @@ Proyecto de la asignatura **Análisis de Datos** (Instituto Tecnológico Metropo
 
 | Nombre | Usuario de GitHub |
 |---|---|
-| _Integrante 1_ | _@usuario1_ |
-| _Integrante 2_ | _@usuario2_ |
-| _Integrante 3_ | _@usuario3_ |
-| _Integrante 4_ | _@usuario4_ |
-| _Integrante 5_ | _@usuario5_ |
+| Santiago Betancur | @Xantyagoh |
+| Diego Alzate | @DiegoA1123 |
+| Carlos Mendez | @carmarisx |
+| Sebastian Cadavid | @Exmen9 |
+| Daniel Martinez | @danielmmnez |
 
 ## Descripción del proyecto
 
